@@ -1,0 +1,29 @@
+<input type="text" [(ngModel)]="labelText" placeholder="Label text" />
+<br>
+<!-- <input type="text" [(ngModel)]="qrString" placeholder="QR Code data" /> -->
+<textarea type="text" [(ngModel)]="qrString" placeholder="QR Code data"></textarea>
+
+<br>
+<select [(ngModel)]="errCorrectionLvl">
+    <option value="L">Low</option>
+    <option value="M">Medium</option>
+    <option value="Q">Q</option>
+    <option value="H">High</option>
+
+</select>
+
+<label>Logo:</label>
+<br>
+<input type="file" (change)="handleFileInput($event.target.files)" accept="image/*" placeholder="Use your image file">
+<br>
+<div>
+<app-qrcode  #qrCodeComp [stringToEncode]="qrString" [labelText]="labelText" [errorCorrectionLevel]="errCorrectionLvl" [logoImgSrc]="logo">
+</app-qrcode>
+<br>
+<app-label-template [stringToEncode]="qrString" [labelText]="labelText" [errorCorrectionLevel]="errCorrectionLvl" [logoImgSrc]="logo"></app-label-template>
+</div>
+<br>
+<div>
+<button (click)="downloadImage()">Download Image</button>
+</div>
+<app-sample-page></app-sample-page>

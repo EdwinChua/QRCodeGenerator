@@ -1,0 +1,3 @@
+<app-qrcode #qrCode style="display: none;" [stringToEncode]="stringToEncode" [labelText]="labelText" [errorCorrectionLevel]="errorCorrectionLevel" [logoImgSrc]="logoImgSrc" [height]="height" (qrImgBase64_EventEmitter)="qrCodeImageUpdated($event)">
+</app-qrcode>
+<canvas #canvas style="image-rendering: crisp-edges" width="{{width}}" height="{{height}}"></canvas>
