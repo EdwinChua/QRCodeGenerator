@@ -14,6 +14,7 @@ export class AppComponent {
   logo: string = ""
   labelText: string = "";
   errCorrectionLvl: string = 'L';
+  height=400;
   @ViewChild('qrCodeComp', { static: false }) qrCodeComp: QRCodeComponent;
 
 

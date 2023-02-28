@@ -14,7 +14,7 @@ export class QRCodeComponent implements OnInit, AfterViewInit {
   @Input() stringToEncode: string;
   @Input() labelText: string;
   @Input() logoImgSrc: string = "";
-  @Input() height:number = 200;
+  @Input() height:number = 400;
   @Input() margin: number = 0;
 
   @Output() qrImgBase64_EventEmitter = new EventEmitter<string>();

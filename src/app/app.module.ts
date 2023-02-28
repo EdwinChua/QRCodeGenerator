@@ -17,7 +17,7 @@ import { SamplePageComponent } from './sample-page/sample-page.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
