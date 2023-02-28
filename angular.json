@@ -24,11 +24,20 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
           },
           "configurations": {
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -39,12 +48,11 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
+              "buildOptimizer": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -68,8 +76,12 @@
           "configurations": {
             "production": {
               "browserTarget": "QRCodeTest:build:production"
+            },
+            "development": {
+              "browserTarget": "QRCodeTest:build:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -121,5 +133,8 @@
         }
       }
     }},
-  "defaultProject": "QRCodeTest"
+  "defaultProject": "QRCodeTest",
+  "cli": {
+    "analytics": "5d0a1da0-2eda-474a-9da7-022b601d2727"
+  }
 }
