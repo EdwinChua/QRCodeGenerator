@@ -31,7 +31,8 @@
           },
           "configurations": {
             "development": {
-              "buildOptimizer": false,
+              "buildOptimizer": true,
+              "aot": true,
               "optimization": false,
               "vendorChunk": true,
               "extractLicenses": false,
